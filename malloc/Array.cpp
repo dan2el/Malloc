@@ -30,8 +30,10 @@ void Reallocate(tArr* _pArr) {
 
 	//	3. 기존 공간은 메모리 해제
 	free(_pArr->pInt);
+
 	//	4. 배열이 새로 할당된 공간을 가리키게 한다.
 	_pArr->pInt = pNew;
+	
 	//	5. MaxCount 변경점 적용
 	_pArr->iMaxCount *= 2;
 }
